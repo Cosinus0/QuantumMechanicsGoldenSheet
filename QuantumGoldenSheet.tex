@@ -1,4 +1,4 @@
-\documentclass[10pt,a4paper]{article}
+\documentclass[10pt,twocolumn,a4paper]{article}
 \usepackage[utf8x]{inputenc}
 \usepackage{ucs}
 \usepackage{amsmath}
@@ -7,5 +7,47 @@
 \usepackage{graphicx}
 \usepackage[left=1.00cm, right=1.00cm, top=2.00cm, bottom=2.00cm]{geometry}
 \begin{document}
-	
+\section*{Statistics and Probability}
+\begin{equation*}
+\int_{a}^{b} |\Psi(x,t)|^2 \; dx = \text{Probability of finding the particle between a and b, at time t}
+\end{equation*}
+
+\begin{align}
+P_{ab} = \int_{a}^{b}\rho(x) \; dx\\
+1 = \int_{-\infty}^{\infty}\rho(x) \; dx\\
+\langle x \rangle = \int_{-\infty}^{\infty} x\rho(x) \; dx\\
+\langle f(x) \rangle = \int_{-\infty}^{\infty} f(x)\rho(x) \; dx\\
+\sigma^2 = \langle (\delta x)^2 \rangle = \langle x^2 \rangle - \langle x \rangle^2
+\end{align}
+
+\section*{Wave Function}
+\begin{align*}
+\text{Normalization:}\int_{- \infty}^{\infty} |\Psi(x,t)|^2 \; dx = 1 \\
+\text{If $\Psi$ is normalized at $t=0$, it stays normalized for all future times}
+\end{align*}
+
+\begin{equation*}
+\langle x \rangle = \int \Psi^{\ast}\left(x\right)\Psi \; dx
+\end{equation*}
+
+\begin{equation*}
+\langle p \rangle = m \frac{d \langle x \rangle}{dt} = -i \hbar \int \left( \Psi^{\ast} \frac{\partial \Psi}{\partial x} \right) \; dx = \int \Psi^{\ast} \left(\frac{\hbar}{i} \frac{\partial}{\partial x} \right) \Psi \; dx 
+\end{equation*}
+
+\begin{equation*}
+\text{General:} \langle Q(x,p) \rangle = \int \Psi^{\ast} Q \left( x, \frac{\hbar}{i}\frac{\partial}{\partial x}\right) \Psi \; dx
+\end{equation*}
+
+\begin{align*}
+T = \frac{1}{2}mv^2 = \frac{p^2}{2m}\\
+\text{Kinetic Energy:} \langle T \rangle = -\frac{\hbar^2}{2m} \int \Psi^{\ast} \left( \frac{\partial^2 \Psi}{\partial x^2} \right) \; dx
+\end{align*}
+
+\begin{equation*}
+\text{Ehrenfest's TH (V is potential):} \; \frac{d \langle p \rangle}{dt} = \langle -\frac{\partial V}{\partial x} \rangle
+\end{equation*}	
+
+\begin{equation*}
+\text{de Broglie formula:} \; p = \frac{h}{\lambda} = \frac{2\pi h}{\lambda}
+\end{equation*}
 \end{document}
